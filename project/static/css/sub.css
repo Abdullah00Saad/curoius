@@ -1,0 +1,494 @@
+*:focus {
+    outline: none !important;
+
+}
+
+.product-view {
+    height: 99.9% !important;
+    background: #F4F7F7 !important;
+    /* temporarily */
+    margin-top: 20px !important;
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.p {
+    height: 60% !important;
+    margin-left: 15% !important;
+}
+
+.product-photo {
+    margin-top: 30px !important;
+    margin-right: 15px !important;
+
+}
+
+.product-photo-style {
+    border-radius: 10px !important;
+
+}
+
+.product-title {
+    font-family: Poppins !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    font-size: 45px;
+    line-height: 76px !important;
+    text-transform: capitalize !important;
+
+    color: #384C5F !important;
+    position: absolute !important;
+    width: 553.7px !important;
+    height: 70.7px !important;
+    left: 100px !important;
+    top: 20px !important;
+}
+
+.product-detailes {
+    position: absolute;
+    width: 553.7px !important;
+    height: 70.7px !important;
+    left: 100px !important;
+    top: 90px !important;
+
+    font-family: Poppins !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-size: 25.2px !important;
+    line-height: 38px !important;
+    text-transform: capitalize !important;
+
+    color: #2C847B !important;
+}
+
+.pd {
+    position: absolute !important;
+    width: 483px ;
+    height: 140.7px !important;
+    left: 100px !important;
+    top: 150px !important;
+
+    font-family: Poppins !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-size: 16.8px ;
+    line-height: 25px !important;
+    text-transform: capitalize !important;
+
+    color: #263442 !important;
+}
+
+
+
+#btns {
+    position: absolute !important;
+    margin-top: 295px !important;
+}
+
+
+
+
+/* cart */
+
+
+.shopping-cart {
+    position: fixed;
+    width: 70%;
+    height: 737px;
+
+    margin-left: -8%;
+    background: #F4F7F7;
+    border-radius: 14px;
+}
+
+.overlay {
+    background-color: rgba(121, 121, 121, 0.179) !important;
+}
+
+.payment1 {
+    display: inline;
+}
+
+
+#cart-title {
+
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+
+    text-align: center;
+    text-transform: capitalize;
+
+
+    color: #384C5F;
+}
+
+
+
+.products-cart {
+    position: absolute;
+    width: 425px;
+    height: 82px;
+    left: 91px;
+    top: 217px;
+
+    background: rgba(196, 196, 196, 0.2);
+    border-radius: 6px;
+}
+
+.img-product {
+    position: absolute;
+    width: 70.89px;
+    height: 70px;
+    left: 10px;
+    top: 5px;
+
+
+    border-radius: 6.615px;
+}
+
+.product-name22 {
+    position: absolute;
+    width: 216.22px;
+    height: 50px;
+    left: 90px;
+
+    top: -10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+
+    text-transform: capitalize;
+
+    color: #384C5F;
+
+}
+
+.product-type22 {
+    position: absolute;
+    width: 216.22px;
+    height: 50px;
+    left: 90px;
+    top: 20px;
+
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10.5px;
+    line-height: 16px;
+    text-transform: capitalize;
+
+    color: #85A5C4;
+}
+
+.product-price22 {
+    position: absolute;
+    width: 216.22px;
+    height: 50px;
+    left: 90px;
+    top: 30px;
+
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15.4px;
+    line-height: 23px;
+    text-transform: capitalize;
+
+    color: #43A491;
+}
+
+
+.quanitiy-btn {
+    margin-top: 50px;
+    margin-left: 90%;
+    border: none;
+    cursor: pointer;
+    color: #384C5F;
+    background-color: #EAEDED !important;
+}
+
+.bi-plus-circle:hover {
+    color: #43A491;
+    transition: ease-in-out 0.3s all;
+}
+
+
+.tooltip .tooltiptext {
+
+    width: 60px;
+    background-color: #afafaf;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 3px 0;
+    opacity: 0.5;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    margin-left: 6px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+
+    opacity: 1;
+
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #afafaf transparent transparent;
+}
+
+
+.total-prices {
+    margin-top: 90%;
+    display: inline-block;
+}
+
+th {
+    padding-right: 30px !important;
+    padding-bottom: 15px !important;
+    border-bottom: 1px solid white !important;
+
+}
+
+table {
+    margin-left: 100px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bolder !important;
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: capitalize;
+
+    color: #000000;
+
+
+}
+
+.col-title {
+    padding-right: 200px !important;
+}
+
+.cart-btn22 {
+    width: 222.76px !important;
+    height: 42.35px;
+    /* left: 193px; */
+    /* top: 845px; */
+    position: absolute;
+    border: none;
+    box-shadow: none;
+    border-radius: 8.47px;
+    cursor: pointer;
+}
+
+.cart-btn22:hover {
+    background-color: #1b3046 !important;
+    color: #FFFFFF !important;
+    transition: all 500ms ease !important;
+
+}
+
+
+.bi-x-circle-fill {
+    position: absolute;
+    top: 1%;
+    left: 93%;
+
+}
+
+
+
+
+
+
+/*  payment */
+
+.payment2 {
+    width: 100%;
+    margin-left: 150;
+    margin-right: auto;
+
+}
+
+.crdt-btns {
+    margin-left: 200;
+
+}
+
+.payment-input {
+    /* padding-top: 15px; */
+    background: #F4F7F7 !important;
+    box-shadow: none;
+    border: none;
+    border-bottom: rgb(46, 46, 46) solid 1.5px !important;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    width: 70%;
+    color: rgba(0, 0, 0, 0.5);
+
+    margin-top: 50px !important;
+    margin-left: 80;
+
+}
+
+.payment-input:focus {
+    background: #F4F7F7 !important;
+}
+
+.payment-input:checked {
+    background: #F4F7F7 !important;
+}
+
+.payment-input:active {
+    background: #F4F7F7 !important;
+}
+
+
+
+.cart-btn23 {
+    width: 250px !important;
+    height: 42.35px;
+    top: 645px;
+    position: absolute;
+    border: none;
+    box-shadow: none;
+    border-radius: 8.47px;
+    cursor: pointer;
+    margin-left: 150;
+    margin-right: auto;
+    align-self: center;
+    text-align: center;
+}
+
+.cart-btn23:hover {
+    background-color: #1b3046 !important;
+    color: #FFFFFF !important;
+    transition: all 500ms ease !important;
+
+}
+
+
+
+#visa-credit:focus {
+    border: none;
+
+}
+
+#visa-credit {
+    border: none;
+    background-color: #F4F7F7;
+    cursor: pointer;
+    Width: 84px;
+    Height: 58px;
+}
+
+#master-credit {
+    border: none;
+    background-color: #F4F7F7;
+    cursor: pointer;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+#visa-credit {
+    border: none;
+    background-color: #F4F7F7;
+    cursor: pointer;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+
+.img-hover:hover {
+    filter: brightness(0.96);
+    transition: all 500ms ease !important;
+}
+
+
+#product-view {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    /* You should prefix the following: */
+    transition: max-height 500ms !important;
+
+}
+
+#product-view.active {
+    /* Depending on this value, your animatiom will seem faster or shorter */
+    max-height: 900px !important;
+
+}
+
+
+
+
+
+
+
+
+#master-credit:active {
+    filter: brightness(0.8);
+}
+
+#master-credit:focus {
+    filter: brightness(0.8);
+}
+
+#master-credit:target {
+    filter: brightness(0.8);
+}
+
+
+#visa-credit:active {
+    filter: brightness(0.8);
+}
+
+#visa-credit:focus {
+    filter: brightness(0.8);
+}
+
+#visa-credit:target {
+    filter: brightness(0.8);
+}
+
+
+
+
+
+
+.success-msg {
+    height: 90px;
+    width: 90px;
+    background-color: yellow;
+}
+
+.DIV1 {
+    display: none;
+}
+
+
+

@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    /* margin: 0;
+    padding: 0; */
+    /* background-image: url('pexels-dương-nhân-1120049.jpg'); */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+    font-family: "Poppins", sans-serif !important;
+    color: #1f2f3d !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    background-image: url('/Users/dhay/Desktop/aj-1/images/sign 1.png') !important;
+}
+
+.box {
+    width: 580px;
+    height: 600px;
+    background: rgb(26, 86, 89, 0.4);
+    background: linear-gradient(0deg, rgba(186, 189, 189, 0.517) 0%, rgb(26, 48, 75) 100%);
+    padding: 20px;
+    margin: 9% auto 0;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: column;
+    border-radius: 30px;
+
+}
+
+* {
+    overflow: hidden;
+}
+
+
+
+
+
+
+.header {
+    width: 600px;
+    height: 150px;
+    display: inline-flex;
+    padding-top: 20px;
+    padding-bottom: 30px !important;
+    justify-content: space-between;
+    margin-bottom: 40px !important;
+}
+
+.header a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-flex;
+    /* padding-left: -10px;
+    padding-right: 30px; */
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* 
+.header .active {
+    color: #D1E7E4;
+	font-weight: bold;
+	position: relative;
+}
+
+.header .active:after {
+	position: absolute;
+    border: none;
+	content: "";
+} */
+
+#errorMsg {
+    color: red;
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+
+}
+
+.content {
+    display: inline-flex;
+    overflow: hidden;
+}
+
+form {
+    margin-top: 40px;
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    flex-direction: column;
+    transition: right 0.5s;
+    font-family: "Poppins", sans-serif !important;
+}
+
+.login a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif !important;
+    /* padding-right: 30px; */
+
+}
+
+#login {
+    border-right: white solid 2px;
+    padding-right: 70px;
+}
+
+
+
+@media (max-width: 992px) {
+    #login {
+        border-right: none;
+        padding-right: 0px;
+        width: 30%;
+        font-size: medium;
+        margin-left: -2px;
+        padding-left: 32px;
+    }
+
+    #signup {
+        width: 20%;
+        font-size: medium;
+        margin-left: -2px;
+        padding-left: 60px;
+    }
+
+    .box {
+        background: none;
+
+    }
+
+    #logo-res {
+        display: none;
+    }
+
+    #res-title {
+        align-self: center;
+        width: 100%;
+        margin-left: 90px;
+    }
+
+    .page {
+        margin-left: 100px;
+    }
+
+    footer {
+        display: none;
+    }
+
+    body {
+        background-image: none !important;
+        background: rgb(26, 86, 89, 0.4);
+        overflow: scroll;
+    }
+
+
+
+    .title {
+        margin-left: -200px;
+        margin-bottom: -20px !important;
+        width: 100%;
+        font-size: medium;
+    }
+
+    #work-form-res {
+        margin-left: -400px !important;
+
+    }
+
+    #txt-full {
+        display: none;
+    }
+
+    #txt-res {
+        display: inherit;
+    }
+
+}
+
+
+#txt-res {
+    display: none;
+}
+
+
+.extend form {
+    right: 100%;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    display: block;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: none;
+    font-family: "Poppins", sans-serif !important;
+
+}
+
+/* input[type=text]:hover,  input[type=password]:hover, input[type=email]:hover{
+    border:none;
+
+} */
+
+input[type=submit] {
+    display: block;
+    position: relative;
+    border: none;
+    padding: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #2C847B;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    font-family: "Poppins", sans-serif !important;
+}
+
+input[type=submit]:hover {
+    background-color: #256d66;
+    transition: ease-in-out 0.3s;
+
+
+}
+
+input[type=checkbox] {
+    background-color: #D1E7E4;
+}
+
+#check {
+    margin-top: 10px;
+    text-align: left;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+
+input:focus {
+    outline: none !important;
+}
+
+
+/* #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  } */
+
+
+@media screen and (max-width: 992px) {
+
+    .box {
+        width: 380px;
+
+    }
+}
+
+
+#work {
+    margin-left: -70px !important;
+}
+
+
+
+.page2 {
+    width: 100% !important;
+}
+
+
+
+.col1 {
+    padding-right: 100px !important;
+    /* padding-left: -100px !important; */
+}
+
+
+.clearfix {
+    margin-top: 30px !important;
+}
+
+
+
+#responsive-form {
+
+    max-width: 600px
+        /*-- change this to get your desired form width --*/
+    ;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.form-row {
+    width: 100%;
+}
+
+.column-half, .column-full {
+    float: left;
+    position: relative;
+    padding: 0.65rem;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+/**---------------- Media query ----------------**/
+@media only screen and (min-width: 48em) {
+    .column-half {
+        width: 50%;
+    }
+}
+
+
+.wpcf7 input[type="text"], .wpcf7 input[type="email"], .wpcf7 textarea {
+
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.wpcf7 input[type="text"]:focus {
+    background: #fff;
+}
+
+.wpcf7-submit {
+    float: right;
+    background: #CA0002;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.wpcf7-submit:hover {
+    background: #ff0000;
+}
+
+span.wpcf7-not-valid-tip {
+    text-shadow: none;
+    font-size: 12px;
+    color: #fff;
+    background: #ff0000;
+    padding: 5px;
+}
+
+div.wpcf7-validation-errors {
+    text-shadow: none;
+    border: transparent;
+    background: #f9cd00;
+    padding: 5px;
+    color: #9C6533;
+    text-align: center;
+    margin: 0;
+    font-size: 12px;
+}
+
+div.wpcf7-mail-sent-ok {
+    text-align: center;
+    text-shadow: none;
+    padding: 5px;
+    font-size: 12px;
+    background: #59a80f;
+    border-color: #59a80f;
+    color: #fff;
+    margin: 0;
+}
+
+
+.input-work {
+    font-family: "Poppins", sans-serif !important;
+    /* padding-right: 20px !important; */
+    border: none;
+    border-radius: 5px !important;
+    height: 28px !important;
+    width: 270px !important;
+}
+
+input[type="file"] {
+    display: none;
+
+}
+
+textarea {
+    resize: none !important;
+    border-radius: 6px !important;
+    font-family: "Poppins", sans-serif !important;
+
+}
+
+textarea:focus {
+    outline: none !important;
+
+}
+
+.fileup:hover {
+    opacity: 0.8;
+    transition: ease-in-out 0.3s;
+}
+
+
+.byapplying {
+    transform: translateY(-30px);
+    color: white;
+    text-align: center;
+}
+
+
+a:active {
+    outline: none;
+    color: #49948a !important;
+}
+
+a:focus {
+    outline: none;
+    color: #49948a !important;
+}
+
+
+
+nav.main-menu {
+    float: right;
+    margin-left: 0;
+    /* margin-top: 40px; */
+
+}
+
+.menu-area-main li:hover a, .menu-area-main li:focus a {
+
+    color: #384C5F;
+    font-family: "Poppins", sans-serif;
+}
+
+.menu-area-main li.active a {
+    color: #384C5F;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.main-menu {
+    text-align: center;
+    /* margin-top: 40px; */
+
+}
+
+.main-menu ul {
+    margin: 0;
+
+    list-style-type: none;
+    color: #384C5F;
+    font-family: "Poppins", sans-serif;
+}
+
+.main-menu ul>li {
+    display: inline-block;
+    position: relative;
+}
+
+.main-menu ul>li a {
+    padding: 6px 25px 0 25px;
+    line-height: 20px;
+    font-size: 16px;
+    display: block;
+    font-weight: 500;
+    color: #384C5F !important;
+
+
+}
+
+.main-menu ul>li a:hover {
+    color: #466786 !important;
+}
+
+.header {
+    position: absolute;
+    z-index: 999;
+    width: 40%;
+
+
+
+
+}
+
+#signup {
+    text-align: center;
+    margin-right: 100px !important;
+}
+
+.menu-area-main li.active a {
+    color: #384C5F !important;
+
+}
+
+.menu-area-main li.active a:hover {
+
+    list-style-type: none;
+
+}
+
+
+.logo {
+    margin-top: -50px !important;
+}
+
+
+
+
+.title {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    color: white;
+
+}
+
+
+
+#back-to-store {
+    /* margin-top: 150px; */
+    background: none;
+    border: none;
+
+
+}
+
+
+.whit {
+    color: white !important;
+    text-decoration: none !important;
+    font-size: larger;
+    padding: 10px;
+    margin-left: 70px;
+    text-align: center;
+}
+
+
+
+

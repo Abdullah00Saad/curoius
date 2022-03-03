@@ -1,0 +1,109 @@
+.get-in-touch .get-in-touch-header-top{
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 90px;
+}
+.get-in-touch .menu-area-main li.active a {
+    color: #fff;
+}
+.get-in-touch h2{
+    color: rgba(56, 76, 95, 1);
+}
+.get-in-touch .button-18{
+    background-color: #0a66c200;
+    border: 2px solid #2C847B;
+    border-radius: 8px;
+    color: #2C847B!important;
+}
+
+.get-in-touch .button-18:hover,
+.button-18:focus {
+    background-color: #2C847B!important;
+    color: #ffffff!important;
+}
+
+.get-in-touch .button-18:active {
+    background: #2C847B!important;
+    color: rgb(255, 255, 255, .7)!important;
+}
+.cards_wrap{
+    padding: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.cards_wrap .card_item{
+    padding: 15px 25px;
+}
+
+.cards_wrap .card_inner{
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 77px;
+    padding: 45px 50px;
+    min-width: 225px;
+    min-height: 315px;
+    max-height: 440px;
+    max-width: 850px;
+    margin: 8% 0 0 25%;
+    width: 100%;
+}
+.cards_wrap .card_item .card-row{
+    align-items: center;
+}
+
+.cards_wrap .card_item img{
+    width: 40px;
+    height: 40px;
+}
+i{ font-family: 'FontAwesome'!important; }
+
+.cards_wrap .card_item .role_name h1{
+    color: rgba(38, 52, 65, 1);
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.cards_wrap .card_item .real_name{
+    color: rgba(56, 76, 95, 1);
+    font-size: 12px;
+    font-weight: 100;
+    margin: 5px 0 10px;
+}
+
+.cards_wrap .card_item .film h4{
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(56, 76, 95, 1);
+}
+
+@media screen and (max-width: 1024px){
+    .cards_wrap .card_item{
+        width: 33%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .cards_wrap .card_item{
+        width: 50%;
+    }
+    .wrapper .header{
+        font-size: 16px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 568px){
+    .cards_wrap .card_item{
+        width: 100%;
+    }
+    .wrapper .header{
+        font-size: 14px;
+    }
+}
