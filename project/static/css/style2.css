@@ -263,8 +263,8 @@ body a:hover {
 
 
 .row-ee {
-  width: 96% !important;
-  margin-left: auto !important;
+  width: 90% !important;
+  margin-left: 150px !important;
   margin-right: auto !important;
   align-self: center !important;
 }
