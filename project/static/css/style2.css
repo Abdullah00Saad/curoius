@@ -3803,9 +3803,10 @@ input {
 
 
 
+
 .filters-section-store {
   padding: 10px;
-  width: 1280px;
+  width: 1090px;
 }
 
 
@@ -3818,7 +3819,7 @@ input {
 .filters-section-store ul li {
   list-style: none;
   background-color: #f5f5f5;
-  padding: 8px 40px;
+  padding: 8px 70px;
   margin: 5px;
   letter-spacing: 1px;
   cursor: pointer;
