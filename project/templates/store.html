@@ -111,7 +111,7 @@
                                                     </a>
                                                 </li>
                                                 {% endfor %} {% else %}
-                                                <li> <a style="color: #1d425a !important;" id="white-nav" role="button" href="/sign_up">sign up</a> </li>
+                                                <li> <a style="color: #1d425a !important;" id="white-nav" role="button" href="/log_in"><span style="font-weight: bold; ">Log in</span></a> </li>
                                                 {% endif %}
                                                 <li>
                                             </ul>
@@ -180,10 +180,22 @@
                                     </div>
                                     <ul class="bbb_marks">
 
-                                        <li class="bbb_mark bbb_new"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-                                            </svg></li>
+                                        <li class="bbb_mark bbb_new">
+                                            <form action="/store" method="POST">
+
+                                                {% for user_names in user_name %}
+                                                <input style="display: none;" type="text" name="id_user" value="{{ user_names['id'] }}"> {% endfor %}
+                                                <input style="display: none;" type="text" name="id_item" value="10001">
+                                                <input style="display: none;" type="text" name="item_name" value="Puzzle Toy">
+                                                <input style="display: none;" type="text" name="item_price" value="9.00">
+                                                <input style="display: none;" type="text" name="item_photo" value="Rectangle_275-removebg-preview.png">
+                                                <div class="form-group">
+                                                    <!-- <a role="button">add to cart</a> -->
+                                                    <button class="btn btn-add1 btn-primary">+</button>
+                                                </div>
+
+                                            </form>
+                                        </li>
                                     </ul>
 
                                 </div>
@@ -203,10 +215,22 @@
                                     </div>
                                     <ul class="bbb_marks">
 
-                                        <li class="bbb_mark bbb_new"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-                                            </svg></li>
+                                        <li class="bbb_mark bbb_new">
+                                            <form action="/store" method="POST">
+
+                                                {% for user_names in user_name %}
+                                                <input style="display: none;" type="text" name="id_user" value="{{ user_names['id'] }}"> {% endfor %}
+                                                <input style="display: none;" type="text" name="id_item" value="10002">
+                                                <input style="display: none;" type="text" name="item_name" value="Ballistic Bird">
+                                                <input style="display: none;" type="text" name="item_price" value="5.80">
+                                                <input style="display: none;" type="text" name="item_photo" value="Rectangle_276-removebg-preview.png">
+                                                <div class="form-group">
+                                                    <!-- <a role="button">add to cart</a> -->
+                                                    <button class="btn btn-add1 btn-primary">+</button>
+                                                </div>
+
+                                            </form>
+                                        </li>
                                     </ul>
 
                                 </div>
@@ -226,10 +250,22 @@
                                     </div>
                                     <ul class="bbb_marks">
 
-                                        <li class="bbb_mark bbb_new"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-                                            </svg></li>
+                                        <li class="bbb_mark bbb_new">
+                                            <form action="/store" method="POST">
+
+                                                {% for user_names in user_name %}
+                                                <input style="display: none;" type="text" name="id_user" value="{{ user_names['id'] }}"> {% endfor %}
+                                                <input style="display: none;" type="text" name="id_item" value="10003">
+                                                <input style="display: none;" type="text" name="item_name" value="Better Bee">
+                                                <input style="display: none;" type="text" name="item_price" value="12.00">
+                                                <input style="display: none;" type="text" name="item_photo" value="CA448__1_-20180904222233-20180904222638-1000x1000-removebg-preview.png">
+                                                <div class="form-group">
+                                                    <!-- <a role="button">add to cart</a> -->
+                                                    <button class="btn btn-add1 btn-primary">+</button>
+                                                </div>
+
+                                            </form>
+                                        </li>
                                     </ul>
 
                                 </div>
@@ -249,10 +285,22 @@
                                     </div>
                                     <ul class="bbb_marks">
 
-                                        <li class="bbb_mark bbb_new"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-                                            </svg></li>
+                                        <li class="bbb_mark bbb_new">
+                                            <form action="/store" method="POST">
+
+                                                {% for user_names in user_name %}
+                                                <input style="display: none;" type="text" name="id_user" value="{{ user_names['id'] }}"> {% endfor %}
+                                                <input style="display: none;" type="text" name="id_item" value="10004">
+                                                <input style="display: none;" type="text" name="item_name" value="Teaser Wheel">
+                                                <input style="display: none;" type="text" name="item_price" value="8.00">
+                                                <input style="display: none;" type="text" name="item_photo" value="CT53__1_-20210210060215-20210210060256-1000x1000-removebg-preview.png">
+                                                <div class="form-group">
+                                                    <!-- <a role="button">add to cart</a> -->
+                                                    <button class="btn btn-add1 btn-primary">+</button>
+                                                </div>
+
+                                            </form>
+                                        </li>
                                     </ul>
 
                                 </div>
@@ -272,10 +320,22 @@
                                     </div>
                                     <ul class="bbb_marks">
 
-                                        <li class="bbb_mark bbb_new"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-                                            </svg></li>
+                                        <li class="bbb_mark bbb_new">
+                                            <form action="/store" method="POST">
+
+                                                {% for user_names in user_name %}
+                                                <input style="display: none;" type="text" name="id_user" value="{{ user_names['id'] }}"> {% endfor %}
+                                                <input style="display: none;" type="text" name="id_item" value="10005">
+                                                <input style="display: none;" type="text" name="item_name" value="Active Sway">
+                                                <input style="display: none;" type="text" name="item_price" value="12.00">
+                                                <input style="display: none;" type="text" name="item_photo" value="CA425_1_1000x1000-removebg-preview.png">
+                                                <div class="form-group">
+                                                    <!-- <a role="button">add to cart</a> -->
+                                                    <button class="btn btn-add1 btn-primary">+</button>
+                                                </div>
+
+                                            </form>
+                                        </li>
                                     </ul>
 
                                 </div>
@@ -295,10 +355,22 @@
                                     </div>
                                     <ul class="bbb_marks">
 
-                                        <li class="bbb_mark bbb_new"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-                                            </svg></li>
+                                        <li class="bbb_mark bbb_new">
+                                            <form action="/store" method="POST">
+
+                                                {% for user_names in user_name %}
+                                                <input style="display: none;" type="text" name="id_user" value="{{ user_names['id'] }}"> {% endfor %}
+                                                <input style="display: none;" type="text" name="id_item" value="10006">
+                                                <input style="display: none;" type="text" name="item_name" value="Starfish Toy">
+                                                <input style="display: none;" type="text" name="item_price" value="10.00">
+                                                <input style="display: none;" type="text" name="item_photo" value="RBF3_1_1000x1000-removebg-preview.png">
+                                                <div class="form-group">
+                                                    <!-- <a role="button">add to cart</a> -->
+                                                    <button class="btn btn-add1 btn-primary">+</button>
+                                                </div>
+
+                                            </form>
+                                        </li>
                                     </ul>
 
                                 </div>

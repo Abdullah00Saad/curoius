@@ -99,6 +99,10 @@ def signup():
         if not fullname or not email or not password or not username or not phone_number or not address:
             # flash("Please complete your information","danger")
             return redirect("/sign_up")
+        rows = db.execute("SELECT * FROM customers where email=?",email)
+        if len(rows) > 0:
+            flash("Email is already used","danger")
+            return redirect("/sign_up")
         rowss = db.execute("INSERT INTO customers(fullname,username,email,password,phone,address,pic)VALUES(?,?,?,?,?,?,?)",fullname,username,email,password,phone_number,address,user_pic)
         session['user_id'] = rowss
         # flash("welcome","success")
@@ -301,8 +305,11 @@ def admin():
         db.execute("INSERT INTO items(name,animal_kind,type,price,quantity,description,photo)VALUES(?,?,?,?,?,?,?)",name,animal_kind,item_type,price,quantity,description,photo)
         return redirect("/store")
 
-    if session['user_id']:
-        return render_template("admin.html")    
+    if session.get("user_id",None):
+        return render_template("admin.html")
+    else:
+        flash("You are not allowed to enter this page","danger")
+        return redirect("/")    
     
 
 
