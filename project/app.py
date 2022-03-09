@@ -97,7 +97,7 @@ def signup():
         user_pic = save_picture_users(form_picture)
         # user_pic = save_picture_users(request.form.get("member_pic",None))
         if not fullname or not email or not password or not username or not phone_number or not address:
-            # flash("Please complete your information","danger")
+            flash("Please complete your information","danger")
             return redirect("/sign_up")
         rows = db.execute("SELECT * FROM customers where email=?",email)
         if len(rows) > 0:
@@ -105,10 +105,10 @@ def signup():
             return redirect("/sign_up")
         rowss = db.execute("INSERT INTO customers(fullname,username,email,password,phone,address,pic)VALUES(?,?,?,?,?,?,?)",fullname,username,email,password,phone_number,address,user_pic)
         session['user_id'] = rowss
-        # flash("welcome","success")
+        flash("Registeration succeeded ,welcome","success")
         return redirect("/")
     if session.get("user_id",None):
-        # return redirect("/")
+        flash("You are already logged in","dnager")
         return redirect("/")
     
 
@@ -129,21 +129,24 @@ def login():
         password = request.form.get("password", None)
 
         if not email or not password:
-            # flash("email or password not correct","danger")
-            return redirect("/login")
+            flash("email or password not correct","danger")
+            return redirect("/log_in")
 
         rows = db.execute("SELECT * FROM customers where email= ?",email)
         if len(rows) < 1:
+            flash("Email is not registeres ,Please Sign up","danger")
             return redirect("/register")
             
         if not password == rows[0]['password']:
-            # flash("email or password not correct","danger")
-            return redirect("/login")
+            flash("email or password not correct","danger")
+            return redirect("/log_in")
 
 
         session['user_id'] = rows[0]['id']
+        flash("You are logged in","success")
         return redirect("/")
     if session.get("user_id",None):
+        flash("You are already logged in","dnager")
         return redirect("/")
     return render_template("log-in.html")
 
@@ -152,6 +155,7 @@ def log_out():
     if not session.get("user_id",None):
         return redirect("/sign_up")
     del session['user_id']
+    flash("Logged out successfully","success")
     return redirect("/")
 
 
@@ -161,7 +165,8 @@ def log_out():
 @app.route('/payment_cart',methods=['GET','POST'])
 def payment():
     if not session.get("user_id",None):
-        return render_template("index.html")
+        flash("Please Log in first","danger")
+        return redirect("/")
     
 
     if session.get("user_id",None):
@@ -176,6 +181,7 @@ def delete():
         id_it = request.form.get("it_id",None)
         id_us = session['user_id']
         db.execute("DELETE FROM cart WHERE user_id=? AND items_id=?",id_us,id_it)
+        flash("Item deleted successfully","success")
         return redirect("/payment_cart")
     return redirect("/payment_cart")
 
@@ -193,6 +199,8 @@ def store():
         photo_item = request.form.get("item_photo",None)
         price_item = request.form.get("item_price",None)
         db.execute("INSERT INTO cart(user_id,items_id,name,photo,price)VALUES(?,?,?,?,?)",id_user,id_item,name_item,photo_item,price_item)
+        flash("Item added successfully","success")
+
         return redirect("/store")
 
     if not session.get("user_id",None):
@@ -233,10 +241,10 @@ def promote():
         pet_gender = request.form.get("gender", None)
         pet_vaccination =request.form.get("vaccine", None)
         if not pet_name or not pet_age or not pet_kind or not pet_governorate or not pet_gender or not pet_vaccination or not pet_pic:
-            #     flash("please complete the information","danger")
+            flash("please complete the information","danger")
             return redirect("/promote_pet")
         db.execute("INSERT INTO pets(name,age,kind,governorate,condition,gender,vaccinated,photo)VALUES(?,?,?,?,?,?,?,?)",pet_name,pet_age,pet_kind,pet_governorate,pet_condition,pet_gender,pet_vaccination,pet_pic)
-            # flash("pet promoted successfully","success")
+        flash("pet promoted successfully","success")
         return redirect("/adoption")
     return render_template("pet-info.html")
 
@@ -264,7 +272,7 @@ def contact():
             message = request.form.get("message", None)
 
             if not name or not email or not subject or not message:
-                # flash("please complete the form","danger")
+                flash("please complete the form","danger")
                 return redirect("/contact_us")
 
             db.execute("INSERT INTO messages(fullname,email,subject,message)VALUES(?,?,?,?)",name,email,subject,message)
@@ -276,7 +284,7 @@ def contact():
         message = request.form.get("message", None)
 
         if not name or not email or not subject or not message:
-            # flash("please complete the form","danger")
+            flash("please complete the form","danger")
             return redirect("/contact_us")
 
         db.execute("INSERT INTO messages(id,fullname,email,subject,message)VALUES(?,?,?,?,?)",id,name,email,subject,message)

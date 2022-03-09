@@ -51,6 +51,7 @@
 
 <body>
     <header>
+
         <!-- ------------------------------------------------------------------- navbar -------------------------------------------------------------------- -->
 
         <div class="logo">
@@ -58,6 +59,7 @@
             <div class="header-top">
                 <div class="header">
                     <div class="container">
+
                         <div class="row">
                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                                 <div class="full">
@@ -119,10 +121,19 @@
                                     </div>
                                 </div>
                             </div>
+                            {% with msgs = get_flashed_messages(with_categories=true) %} {% if msgs %} {% for cat,msg in msgs %}
+                            <div class="alert alert-{{cat}} alert-dismissible fade show" role="alert">
+                                {{msg}}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+                            </div>
+                            {% endfor %} {% endif %} {% endwith %}
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
 
     </header>
