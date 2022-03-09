@@ -2,8 +2,7 @@ from distutils.debug import DEBUG
 import os
 import secrets
 from PIL import Image
-from flask import Flask, render_template, request, redirect, session, flash, url_for
-from flask_wtf.file import FileField, FileAllowed
+from flask import Flask, render_template, request, redirect, session, flash
 from cs50 import SQL
 from flask_session import Session
 
