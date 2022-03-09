@@ -252,8 +252,18 @@ def promote():
 
 @app.route('/profile',methods=['GET','POST'])
 def profile():
+    if request.method == 'POST':
+        username = request.form.get("username",None)
+        email = request.form.get("email",None)
+        phone = request.form.get("phone",None)
+        address = request.form.get("address",None)
+        db.execute("UPDATE customers SET username=? , email=? , phone=? , address=? WHERE id=?", username,email,phone,address,session.get("user_id"))
+        flash("Account updated","success")
+        return redirect("/profile")
+
+    
     if not session.get("user_id",None):
-        return render_template("sign.html")
+        return render_template("sign-up.html")
     
     items = db.execute("SELECT * FROM cart WHERE user_id = ?", session.get("user_id"))
     customers = db.execute("SELECT * FROM customers WHERE id=?", session.get('user_id'))

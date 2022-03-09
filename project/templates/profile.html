@@ -14,6 +14,14 @@
 <body>
     <div class="container">
         <div class="main-body">
+            {% with msgs = get_flashed_messages(with_categories=true) %} {% if msgs %} {% for cat,msg in msgs %}
+            <div class="alert alert-{{cat}} alert-dismissible fade show" role="alert">
+                {{msg}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            {% endfor %} {% endif %} {% endwith %}
 
             <!-- Breadcrumb -->
             <nav aria-label="breadcrumb" class="main-breadcrumb">
@@ -45,48 +53,57 @@
                 <div class="col-md-8">
                     <div class="card mb-3">
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Full Name</h6>
+                            <form method="POST" action="/profile" class="">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Full Name</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        <input value="{{ customer['username'] }}" name="username" style="border: none;" type="text" placeholder="{{ customer['username'] }}">
+                                    </div>
                                 </div>
-                                <div class="col-sm-9 text-secondary">
-                                    {{ customer['username'] }}
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Email</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        <input value="{{ customer['email'] }}" name="email" style="border: none;" type="text" placeholder="{{ customer['email'] }}">
+                                    </div>
                                 </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Email</h6>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Mobile</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        <input value="{{ customer['phone'] }}" name="phone" style="border: none;" placeholder="{{ customer['phone'] }}" type="text" name="" id="">
+
+                                    </div>
                                 </div>
-                                <div class="col-sm-9 text-secondary">
-                                    {{ customer['email'] }}
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Address</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        <input value="{{ customer['address'] }}" name="address" style="border: none;" placeholder="{{ customer['address'] }}" type="text">
+
+                                    </div>
                                 </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Mobile</h6>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <button type="submit" class="btn btn-success">Edit</button>
+
+                                        <a class="btn btn-info  btn-danger" target="" href="/log_out">log out</a>
+                                    </div>
                                 </div>
-                                <div class="col-sm-9 text-secondary">
-                                    {{ customer['phone'] }}
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Address</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    {{ customer['address'] }}
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <a class="btn btn-info btn-success" target="" href="">Edit</a>
-                                    <a class="btn btn-info  btn-danger" target="" href="/log_out">log out</a>
-                                </div>
-                            </div>
+
+
+                            </form>
+
                         </div>
                     </div>
 
