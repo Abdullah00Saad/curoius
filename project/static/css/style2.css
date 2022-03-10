@@ -264,7 +264,7 @@ body a:hover {
 
 .row-ee {
   width: 90% !important;
-  margin-left: 150px !important;
+  margin-left: 250px !important;
   margin-right: auto !important;
   align-self: center !important;
 }
@@ -1564,9 +1564,7 @@ input[type='radio']:checked:after {
 
 
 
-.drop-adopt {
 
-}
 
 
 
