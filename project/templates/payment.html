@@ -15,7 +15,7 @@
     <title>payment</title>
 </head>
 
-<body>
+<body >
     {% with msgs = get_flashed_messages(with_categories=true) %} {% if msgs %} {% for cat,msg in msgs %}
     <div class="alert alert-{{cat}} alert-dismissible fade show" role="alert">
         {{msg}}
@@ -27,31 +27,18 @@
 
 
 
-
-
-
-
-    <!-- for tetting
-    number: 5114988175561651
-    cvv/cvc :351
-    date: 03/2024
-    
-    
-    
-    
-    -->
     <!------------------------- title + icons------------------------->
 
     <div class="shopping-cart">
 
 
 
-        <div style="background-image: url('images/pexels-arina-krasnikova-7726094.jpg') !important;" class='container'>
+        <div style="background-image: url('project/static/images/pexels-arina-krasnikova-7726094.jpg') !important;" class='container'>
 
 
-            <div class='window'>
-                <div class='order-info'>
-                    <div class='order-info-content'>
+            <div  class='window'>
+                <div  class='order-info'>
+                    <div style="overflow: scroll;"  class=' scroll-hide order-info-content'>
 
                         <div>
                             <div style="float: left; display:inline">
@@ -136,17 +123,18 @@
                             </tbody>
                         </table> -->
                         <div class='line'></div>
-                        <div class='total'>
-                            <h2 style="float: left;">
-                                total
-                            </h2>
-
-                            <h2 style="float: right;">
-                                $40.00
-                            </h2>
-
-                        </div>
+                        
                     </div>
+                </div>
+                <div class='total'>
+                    <h2 style="float: left;">
+                        total:
+                    </h2>
+
+                    <h2 style="float: right;">
+                        
+                    </h2>
+
                 </div>
                 <div class='credit-info credit-ress'>
                     <div class='credit-info-content'>
