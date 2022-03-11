@@ -15,7 +15,7 @@
     <title>payment</title>
 </head>
 
-<body >
+<body>
     {% with msgs = get_flashed_messages(with_categories=true) %} {% if msgs %} {% for cat,msg in msgs %}
     <div class="alert alert-{{cat}} alert-dismissible fade show" role="alert">
         {{msg}}
@@ -33,12 +33,12 @@
 
 
 
-        <div style="background-image: url('project/static/images/pexels-arina-krasnikova-7726094.jpg') !important;" class='container'>
+        <div style="background-image: url('../static/images/pexels-arina-krasnikova-7726094.jpg') !important;" class='container'>
 
 
-            <div  class='window'>
-                <div  class='order-info'>
-                    <div style="overflow: scroll;"  class=' scroll-hide order-info-content'>
+            <div class='window'>
+                <div class='order-info'>
+                    <div style="overflow: scroll;" class=' scroll-hide order-info-content'>
 
                         <div>
                             <div style="float: left; display:inline">
@@ -70,7 +70,7 @@
                                             <br><span class='thin'>{{ items['name'] }}</span>
                                             <span id="x">
                                                 <form action="/del_item" method="POST">
-                                                    <input style="display: none;" type="text" name="it_id" value="{{ items['items_id'] }}">
+                                                    <input style="display: none;" type="text" name="id" value="{{ items['id'] }}">
                                                     
                                                     <div class="form-group">
                                                         <!-- <a role="button">add to cart</a> -->
@@ -123,7 +123,7 @@
                             </tbody>
                         </table> -->
                         <div class='line'></div>
-                        
+
                     </div>
                 </div>
                 <div class='total'>
@@ -132,7 +132,7 @@
                     </h2>
 
                     <h2 style="float: right;">
-                        
+
                     </h2>
 
                 </div>

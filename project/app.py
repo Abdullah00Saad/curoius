@@ -177,9 +177,9 @@ def payment():
 @app.route('/del_item',methods=['GET','POST'])
 def delete():
     if request.method == 'POST':
-        id_it = request.form.get("it_id",None)
-        id_us = session['user_id']
-        db.execute("DELETE FROM cart WHERE user_id=? AND items_id=?",id_us,id_it)
+        it = request.form.get("id",None)
+        # id_us = session['user_id']
+        db.execute("DELETE FROM cart WHERE id=?",it)
         flash("Item deleted successfully","success")
         return redirect("/payment_cart")
     return redirect("/payment_cart")
