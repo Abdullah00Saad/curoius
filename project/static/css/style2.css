@@ -263,8 +263,8 @@ body a:hover {
 
 
 .row-ee {
-  width: 100% !important;
-  margin-left: 150px !important;
+  width: 85% !important;
+  margin-left: 250px !important;
   margin-right: auto !important;
   align-self: center !important;
 }
@@ -1203,6 +1203,7 @@ margin-top: 30px !important;
 
 }
 
+
 .btn-add1:hover {
   background-color: #43a99e !important;
   border-color: #43a99e !important;
@@ -1243,6 +1244,7 @@ margin-top: 30px !important;
 .card-body {
   color: #263441 !important;
 }
+
 
 #work_fullname,
 #work_email,
@@ -2155,13 +2157,22 @@ section {
   .bbb_overlay {
     opacity: 0;
   }
+  .bbb_slider_container {
+    width: 100%;
+  }
+ 
+
 }
 
 @media only screen and (max-width: 991px) {
   .bbb_background {
     opacity: 0;
   }
+  .owl-item {
+  width: 200px !important;
+  }
 }
+
 
 @media only screen and (max-width: 991px) {
   .store {
@@ -2242,6 +2253,10 @@ section {
 
   .bg-grey {
     height: 800px;
+  }
+  .card {
+    margin-left: -220px !important;
+    width: 90%;
   }
 
 }
