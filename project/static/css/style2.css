@@ -250,8 +250,8 @@ body a:hover {
 }
 
 .store {
-  background-color: #f3f3f3;
-  width: 96%;
+  /* background-color: #f3f3f3; */
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
@@ -263,8 +263,8 @@ body a:hover {
 
 
 .row-ee {
-  width: 85% !important;
-  margin-left: 250px !important;
+  width: 100% !important;
+  margin-left: 150px !important;
   margin-right: auto !important;
   align-self: center !important;
 }
@@ -806,6 +806,7 @@ span {
   border: none !important;
   box-shadow: 0px 2px 2px rgb(226, 226, 226);
   border-radius: 9px !important;
+
 
 }
 
@@ -3832,7 +3833,7 @@ input {
 
 .filters-section-store ul li {
   list-style: none;
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
   padding: 8px 70px;
   margin: 5px;
   letter-spacing: 1px;
