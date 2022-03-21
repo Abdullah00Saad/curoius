@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
-
+    <link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/cat-footprint.png" />
     <link rel="stylesheet" href="../static/css/style2.css" />
     <link rel="stylesheet" href="../static/css/sub.css" />
     <link rel="stylesheet" href="../static/css/bootstrap.css">
@@ -461,7 +461,19 @@
                               </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1C40F" class="bi bi-star-fill" viewBox="0 0 16 16">
                                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
                               </svg><br>
-                        <h3 onclick="myFunctionproduct()" class="read-more">read more....</h3>
+                        <form action="/preview" method="POST">
+                            <input type="text" name="for" style="display: none;" value="preview">
+                            <input type="text" name="id" style="display: none;" value="{{ item['id'] }}">
+                            <input type="text" name="type" style="display: none;" value="{{ item['type'] }}">
+                            <div class="form-group">
+                                <button><h3 class="read-more">read more....</h3></button>
+
+
+                            </div>
+
+
+                        </form>
+
                         <form action="/store" method="POST">
                             {% for user_names in user_name %}
                             <input style="display: none;" type="text" name="id_user" value="{{ user_names['id'] }}"> {% endfor %}
@@ -481,7 +493,16 @@
             </div>
             {% endfor %}
 
-
+            <style>
+                .read-more {
+                    margin-top: 2px;
+                    display: inline;
+                    float: left;
+                    color: #2f5879 !important;
+                    cursor: pointer;
+                    margin-bottom: 60px !important;
+                }
+            </style>
             <!-- <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
 
                 Card
@@ -576,59 +597,15 @@
         </div> -->
 
 
-
-
-
-            <!-- ------------------------------------------------------------------- preview -------------------------------------------------------------------- -->
-
-
         </div>
     </section>
 
-
-    <div class="product-view" id="product-view">
-        <div class=" p">
-            <div class="row">
-                <div class="col-6 col-md-4">
-                    <div class="product-photo">
-                        <img class="product-photo-style" src="../static/images/product-photo1.png">
-                    </div>
-
-
-
-                </div>
-                <div class=" col-md-8">
-                    <div class="product-desc">
-                        <h1 class="product-title">
-                            KONG Cat Wubba™
-                        </h1>
-                        <h3 class="product-detailes">
-                            $7.00 <span style="color:#67727C;">in shipping</span>
-                        </h3>
-                    </div>
-                    <div class="">
-                        <h4 class="pd">
-                            this product specifically developed to appeal to a cat's instinctive desire to stalk and capture prey. All Cat Wubba™ toys have a rattle sound and are infused with KONG's premium North American catnip for added attraction.
-                        </h4>
-                        <button class="btn btn-primary nav_button " id="btns" style="background-color: #2C847B;  left: 95px !important;
-                         color: white;">add
-                            to cart</button>
-                    </div>
-                    <div class="add-to-cart">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
 
 
 
 
 
     <br><br>
-    <!-- ------------------------------------------------------------------- sales -------------------------------------------------------------------- -->
 
 
     <!-- ------------------------------------------------------------------- footer -------------------------------------------------------------------- -->
@@ -786,17 +763,8 @@
         });
     </script>
 
-    <!--  -->
-    <script>
-        function myFunctionproduct() {
-            var div = document.getElementById("product-view");
-            if (div.className === "active") {
-                div.className = "";
-            } else {
-                div.className = "active";
-            }
-        }
-    </script>
+
+
     <!---- ------------------------- javascripty -- --------------------------->
     <script>
         function myFunction() {
