@@ -212,8 +212,44 @@ def store():
         return render_template("store.html",items=items,user_name=user_name)
 
     
+@app.route('/preview', methods=['GET','POST'])
+def preview():
+    if request.method == 'POST':
+        if request.form.get("",None)=='cart':
+
+            id_user = request.form.get("id_user",None)
+            id_item = request.form.get("id_item",None)
+            name_item = request.form.get("item_name",None)
+            photo_item = request.form.get("item_photo",None)
+            price_item = request.form.get("item_price",None)
+            db.execute("INSERT INTO cart(user_id,items_id,name,photo,price)VALUES(?,?,?,?,?)",id_user,id_item,name_item,photo_item,price_item)
+            flash("Item added successfully","success")
+
+            return redirect("/preview")
+        if request.form.get("for",None)=='preview':
+            if not session.get("user_id",None):
+                id = request.form.get("id",None)
+                type = request.form.get("type",None)
+                preview = db.execute("SELECT * FROM items WHERE id=?",id)
+                items = db.execute("SELECT * FROM items WHERE type=?",type)
+                return render_template("preview.html", preview=preview,items=items)
+            if session.get("user_id",None):
+                id = request.form.get("id",None)
+                type = request.form.get("type",None)
+                preview = db.execute("SELECT * FROM items WHERE id=?",id)
+                items = db.execute("SELECT * FROM items WHERE type=?",type)
+                user_name = db.execute("SELECT * FROM customers WHERE id=?", session['user_id'])
+
+                return render_template("preview.html", preview=preview,items=items,user_name=user_name)
+
+        
+    
 
 
+
+
+
+    
 @app.route('/adoption',methods=['GET','POST'])
 def adoption():
     if not session.get("user_id",None):
