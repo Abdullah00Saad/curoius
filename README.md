@@ -1,5 +1,5 @@
 
-# CURIOUS-CREATURES22
+# CURIOUS-CREATURES
 CURIOUS CREATURES - cs50x final project
 this website will make it easier for customers to buy high-quality products
 for their pets, finding a professional care techs to help mainting a good health and hygiene for their pets, and to adopt pets from all kinds.
